@@ -4,7 +4,7 @@ This barebones demo app will show you how to use cognito user pools for authoriz
 
 ## Cognito Set Up
 
-You must have a valid cognito user pool set up.  Once you set up your user pool, add an app to the user pool with the logout and redirect_uri of https://localhost:5173.  This is the vite dev address you will be using. You must update the other settings in the .env file to match your AWS domain and credentials.  Note that the client secret does not have the prefix PUBLIC.  Also note that it is imported in the hooks.server.js file from '$env/static/private' instead of '$env/static/public'.  It is very important not to change this.
+You must have a valid cognito user pool set up.  Once you set up your user pool, add an app to the user pool with the logout and redirect_uri of https://localhost:5173.  This is the vite dev address you will be using. You must update the other settings in the example.env file to match your AWS domain and credentials.  Rename the example.env file to .env.  Note that the client secret does not have the prefix PUBLIC.  Also note that it is imported in the hooks.server.js file from '$env/static/private' instead of '$env/static/public'.  It is very important not to change this.
 
 ## Install
 
