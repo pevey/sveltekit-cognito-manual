@@ -21,7 +21,6 @@ export const handle = async ({ event, resolve }) => {
 		// In this example, we have user object with only the session id 
 
 		event.locals.user = { session_id: event.locals.session_id }
-		event.locals.authorized = true
 	} 
 
     // SESSION COOKIE NOT FOUND OR WAS INVALID
@@ -38,7 +37,6 @@ export const handle = async ({ event, resolve }) => {
 				// In this example, we skip that
 				event.cookies.set('session_id', event.locals.session_id, { path: '/' });
 				event.locals.user = { session_id: event.locals.session_id }
-				event.locals.authorized = true
             } catch (error) {
                 console.log('could not retrieve cognito user with the token')
             }
